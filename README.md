@@ -1,6 +1,6 @@
 # blpro
 
-> My polished Nuxt.js project
+> My polished Nuxt.js project，main content is my blog pages
 
 ## Build Setup
 
