@@ -55,6 +55,9 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
+    styleResources: {
+      scss: './assets/global.scss'
+    },
     extend(config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
@@ -66,6 +69,6 @@ module.exports = {
         })
       }
     },
-    cache:'true'
+    cache: false
   }
 }

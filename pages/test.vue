@@ -28,9 +28,7 @@
         :xl="1"><div class="grid-content bg-purple-light"/></el-col>
     </el-row>
 
-    <style 
-      lang="scss" 
-      scoped>
+    <style lang="scss" scoped>
       .el-col {
       border-radius: 4px;
       }
@@ -63,4 +61,7 @@ export default {
 </script>
 
 <style lang="scss">
+div {
+  color: red;
+}
 </style>
