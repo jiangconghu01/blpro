@@ -1,0 +1,163 @@
+
+//重置基础样式
+*{
+    color:azure;
+}
+ul{
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style: none;
+}
+
+//重置element-ui的默认样式
+a{
+    color: azure
+}
+a:focus,a:hover{
+    color: #fff;
+}
+
+
+.el-input.is-active .el-input__inner, .el-input__inner:focus{
+    border-color: #fff;
+}
+
+//media样式480、600、840、960、1280、1440和1600dp
+/* Extra small devices (phones, 480px and down) */
+@media only screen and (max-width: 480px) {
+    .layout-default{
+        header.component-header{
+            .el-row{
+                display: none;
+            }
+        }
+        .el-carousel__container{
+            height: 200px;
+        }
+        .bg-top{
+            padding: 70px 0;
+        }
+    }
+}
+@media only screen and (min-width: 480px) and (max-width: 600px) {
+    .layout-default{
+        header.component-header{
+            .el-row{
+                display: none;
+            }
+        }
+        .bg-top{
+            padding: 80px 0;
+        }
+    }
+    .el-carousel__container{
+        height: 210px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 840px){
+    .layout-default{
+        header.component-header{
+            .el-row{
+                display: block;
+                width: 95%;
+                font-size: 1.4 * $fontbase;
+                & .el-col:first-child {
+                  font-size: 1.8 * $fontbase;
+                }
+                .com-header-hovbox{
+                    font-size: 1.4 * $fontbase;
+                }
+            }
+        }
+
+        .el-carousel__container{
+            height: 250px;
+        }
+        .bg-top{
+            padding: 90px 0;
+        }
+    }
+}
+
+/* Medium devices (landscape tablets, 800px and up) */
+@media only screen and (min-width: 840px) and (max-width: 960px){
+    .layout-default{
+        header.component-header{
+            .el-row{
+                display: block;
+                width: 90%;
+                font-size: 1.6 * $fontbase;
+                & .el-col:first-child {
+                  font-size: 2 * $fontbase;
+                }
+                .com-header-hovbox{
+                    font-size: 1.4 * $fontbase;
+                }
+            }
+        }
+    }
+    .el-carousel__container{
+        height: 300px;
+    }
+} 
+
+/* Large devices (laptops/desktops, 960px and up) */
+@media only screen and (min-width: 960px) and (max-width: 1280px){
+    .layout-default{
+        header.component-header{
+            .el-row{
+                display: block;
+                width: 75%;
+                font-size: 1.8 * $fontbase;
+                & .el-col:first-child {
+                  font-size: 2.2 * $fontbase;
+                }
+                .com-header-hovbox{
+                    font-size: 1.6 * $fontbase;
+                }
+            }
+        }
+    }
+    .el-carousel__container{
+        height: 350px;
+    }
+} 
+
+/* Extra large devices (large laptops and desktops, 1280px and up) */
+@media only screen and (min-width: 1280px) and (max-width: 1440px) {
+    .layout-default{
+        header.component-header{
+            .el-row{
+                display: block;
+                width: 65%;
+            }
+        }
+    }
+    .el-carousel__container{
+        height: 400px;
+    }
+}
+/* Extra large devices (large laptops and desktops, 1440px and up) */
+@media only screen  and (min-width: 1440px) {
+    .layout-default{
+        header.component-header{
+            .el-row{
+                display: block;
+                width: 55%;
+            }
+        }
+        .el-carousel__container{
+            height: 400px;
+        }
+    }
+}
+/* Extra large devices (large laptops and desktops, 1600px and up) */
+// @media only screen and (min-width: 1600px) {
+
+// }
+
+

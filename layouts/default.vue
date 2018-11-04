@@ -2,18 +2,24 @@
   <div class="layout-default">
     <Header></Header>
     <nuxt/>
+    <Footer></Footer>
   </div>
 </template>
 <script>
 import Header from '@/components/public/header.vue'
+import Footer from '@/components/public/footer.vue'
 export default {
   components: {
-    Header
+    Header,
+    Footer
   }
 }
 </script>
 
 <style>
+.layout-default {
+  background-color: #f6f6f6;
+}
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
