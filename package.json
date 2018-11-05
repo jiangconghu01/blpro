@@ -13,6 +13,14 @@
     "fix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint"
   },
+  "browserslist": [
+    "> 1%",
+    "last 15 versions",
+    "last 15 Chrome versions",
+    "last 15 Firefox versions",
+    "Safari >= 6",
+    "ie > 8"
+  ],
   "dependencies": {
     "cross-env": "^5.2.0",
     "nuxt": "^2.0.0",
@@ -22,6 +30,7 @@
   },
   "devDependencies": {
     "acorn": "^6.0.2",
+    "autoprefixer": "^9.3.1",
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.1",
     "babel-preset-env": "^1.7.0",

@@ -60,9 +60,7 @@ export default {
       overflow: hidden;
       text-overflow: ellipsis;
       display: -webkit-box;
-      /* autoprefixer: off */
       -webkit-box-orient: vertical;
-      /* autoprefixer: on */
       -webkit-line-clamp: 3;
     }
     font-size: 1.4 * $fontbase;

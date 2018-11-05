@@ -27,6 +27,9 @@
         :lg="3" 
         :xl="1"><div class="grid-content bg-purple-light"/></el-col>
     </el-row>
+    <div class="test">
+      <label>sdfjsdf</label>
+    </div>
   </div>
 </template>
 
@@ -44,5 +47,8 @@ export default {
 <style lang="scss">
 div {
   color: red;
+}
+.test {
+  transform: translateY(50%);
 }
 </style>

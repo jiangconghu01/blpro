@@ -56,6 +56,7 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
+    postcss: [require('autoprefixer')()],
     styleResources: {
       scss: './assets/global.scss'
     },
