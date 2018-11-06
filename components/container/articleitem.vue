@@ -9,7 +9,15 @@
         如图，要实现上图效果，我采用如下方法：1、首先在数据库模型，增加字段，分别是图片2，图片3。2、增加标签模板，用if，else if 来判断，输出。思路已打开，样式调用就可以多样化啦！...
       </p>
     </div>
-    <div class="blog-infor"></div>
+    <div class="blog-infor">
+      <el-row :gutter="6">
+        <el-col :span="4"><div class="grid-content author">{{ infor.author }}</div></el-col>
+        <el-col :span="4"><div class="grid-content muname">{{ infor.muname }}</div></el-col>
+        <el-col :span="6"><div class="grid-content date">{{ infor.date }}</div></el-col>
+        <el-col :span="6"><div class="grid-content view">{{ infor.view }}已阅读</div></el-col>
+        <el-col :span="4"><div class="grid-content like">{{ infor.like }}</div></el-col>
+      </el-row>
+    </div>
   </div>
 </template>
 
@@ -17,19 +25,19 @@
 export default {
   data() {
     return {
-      routelist: [
-        { text: '网络基础', route: '/' },
-        { text: '构建工具', route: '/' },
-        { text: '框架库', route: '/' },
-        { text: '语言基础', route: '/' },
-        { text: '数据和算法', route: '/' }
-      ]
+      infor: {
+        author: '蒋从虎',
+        muname: '慢生活',
+        date: '2018-10-31',
+        view: 66,
+        like: 99
+      }
     }
   }
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .com-container-article {
   width: 100%;
   background-color: #fff;
@@ -39,7 +47,6 @@ export default {
   h3 {
     font-size: 2 * $fontbase;
     width: 100%;
-    color: #555;
     margin-bottom: 10px;
     //transform: rotateX(5deg);
     //text-overflow: ellipsis;
@@ -48,7 +55,7 @@ export default {
   }
   .abstrct {
     .img {
-      width: 32%;
+      width: 28%;
       float: left;
       margin-right: 20px;
       img {
@@ -56,7 +63,6 @@ export default {
       }
     }
     .text {
-      color: #555;
       overflow: hidden;
       text-overflow: ellipsis;
       display: -webkit-box;
@@ -64,6 +70,38 @@ export default {
       -webkit-line-clamp: 3;
     }
     font-size: 1.4 * $fontbase;
+  }
+  .blog-infor {
+    padding-top: 20px;
+    float: left;
+    font-size: 1.2 * $fontbase;
+    width: 65%;
+    .grid-content {
+      padding-left: 20px;
+      //display: inline;
+      height: 16px;
+      line-height: 16px;
+    }
+    .author {
+      background: url('../../assets/images/auicon.jpg') no-repeat 0 -2px;
+    }
+    .muname {
+      background: url('../../assets/images/auicon.jpg') no-repeat 0 -25px;
+    }
+    .date {
+      background: url('../../assets/images/auicon.jpg') no-repeat 0 -46px;
+    }
+    .view {
+      background: url('../../assets/images/auicon.jpg') no-repeat 0 -66px;
+    }
+    .like {
+      background: url('../../assets/images/auicon.jpg') no-repeat 0 -87px;
+    }
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .com-container-article .blog-infor {
+    width: 85%;
   }
 }
 </style>

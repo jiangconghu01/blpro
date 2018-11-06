@@ -18,7 +18,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .com-header-search {
   .el-icon-search {
     color: #909399;

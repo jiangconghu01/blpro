@@ -2,7 +2,7 @@
   <div class="index-box">
     <Back-ground :imgurl="bgimg"></Back-ground>
     <div class="index-layout">
-      <div class="index-containner">
+      <div class="index-containner clearfix">
         <article class="left-side">
           <!-- <el-carousel trigger="click" height="350px"> -->
           <el-carousel arrow="always">
@@ -13,6 +13,15 @@
               </div>
             </el-carousel-item>
           </el-carousel>
+          <Article-item></Article-item>
+          <Article-item></Article-item>
+          <Article-item></Article-item>
+          <Article-item></Article-item>
+          <Article-item></Article-item>
+          <Article-item></Article-item>
+          <Article-item></Article-item>
+          <Article-item></Article-item>
+          <Article-item></Article-item>
           <Article-item></Article-item>
         </article>
         <aside class="right-side">
@@ -57,10 +66,7 @@ export default {
 .index-containner {
   max-width: 1140px;
   margin: 20px auto 0;
-  overflow: hidden;
-  //height: 800px;
   .left-side {
-    height: 1600px;
     width: 66%;
     float: left;
     background-color: aqua;
