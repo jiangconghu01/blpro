@@ -16,7 +16,16 @@
           <Article-item v-for="(item,index) in articleList" :key="index" :information="item"></Article-item>
         </article>
         <aside class="right-side">
-
+          <section class="top-link">
+            <h2>个人简介</h2>
+            <div class="head-photo">
+              <a href="/"><img src="../assets/images/headphoto2.jpeg" alt=""></a>
+            </div>
+            <p class="abstract">博主: 逸风</p>
+            <p class="abstract">职业: 长方形混凝土块转移工程师</p>
+            <p class="abstract">邮箱: jiangconghu_y@126.com</p>
+            <p class="abstract">随心听</p>
+          </section>
         </aside>
       </div>
     </div>
@@ -164,6 +173,36 @@ export default {
     width: 32%;
     float: right;
     background-color: aqua;
+  }
+  .top-link {
+    height: 400px;
+    padding: 0 15px;
+    background-color: #fff;
+    //background: linear-gradient(to top, #2c3e50, #4ca1af);
+    //background: linear-gradient(to top, #a1c4fd, #c2e9fb);
+    //background: linear-gradient(to top, #d4fc79, #96e6a1);
+    //background: linear-gradient(to top, #0c628a, #e4e132);
+    // background-image: url('../assets/images/gradient.jpg');
+    // background-size: cover;
+    .head-photo {
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    p {
+      background: #f6f6f6;
+      color: #555;
+      margin: 5px 0;
+      padding-left: 10px;
+      border-radius: 5px;
+      text-shadow: rgba(255, 255, 255, 0.3) 0px 1px 0px;
+    }
   }
 }
 @media only screen and (max-width: 840px) {
