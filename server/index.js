@@ -2,6 +2,7 @@
 import Koa from 'koa'
 const consola = require('consola')
 const { Nuxt, Builder } = require('nuxt')
+const staticzSource = require('koa-static')
 
 const app = new Koa()
 const host = process.env.HOST || '127.0.0.1'
@@ -34,7 +35,7 @@ async function start() {
       })
     })
   })
-
+  app.use(staticzSource(__dirname, './assets'))
   app.listen(port, host)
   consola.ready({
     message: `Server listening on http://${host}:${port}`,

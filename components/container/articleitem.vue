@@ -16,11 +16,11 @@
     </div>
     <div class="blog-infor">
       <el-row :gutter="8">
-        <el-col :span="4"><div :title="itemInfor.author" class="grid-content author">{{ itemInfor.author }}</div></el-col>
+        <el-col :span="6"><div :title="itemInfor.author" class="grid-content author">{{ itemInfor.author }}</div></el-col>
         <el-col :span="4"><div class="grid-content muname">{{ itemInfor.muname }}</div></el-col>
         <el-col :span="6"><div class="grid-content date">{{ itemInfor.date }}</div></el-col>
-        <el-col :span="6"><div class="grid-content view">{{ itemInfor.view }}已阅读</div></el-col>
-        <el-col :span="4"><div class="grid-content like">{{ itemInfor.like }}</div></el-col>
+        <el-col :span="5"><div class="grid-content view">{{ itemInfor.view }}已阅读</div></el-col>
+        <el-col :span="3"><div class="grid-content like">{{ itemInfor.like }}</div></el-col>
       </el-row>
     </div>
   </div>

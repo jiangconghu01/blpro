@@ -25,6 +25,13 @@
             <p class="abstract">职业: 长方形混凝土块转移工程师</p>
             <p class="abstract">邮箱: jiangconghu_y@126.com</p>
             <p class="abstract">随心听</p>
+            <!-- <audio src="../assets/music/in-the-end.mp3"></audio> -->
+          </section>
+          <section class="recommend">
+            <Aside-title>特别推荐</Aside-title>
+            <ul>
+              <li v-for="item in recommendList" :key="item" class="item-img" ><Item-img :img="item.img" :title="item.title"></Item-img></li>
+            </ul>
           </section>
         </aside>
       </div>
@@ -36,13 +43,17 @@
 import Logo from '~/components/Logo.vue'
 import BackGround from '@/components/public/background.vue'
 import ArticleItem from '@/components/container/articleitem.vue'
+import ItemImg from '@/components/container/itemimg.vue'
+import AsideTitle from '@/components/container/asidetitle.vue'
 import img from '@/assets/images/blank.jpg'
 
 export default {
   components: {
     Logo,
     BackGround,
-    ArticleItem
+    ArticleItem,
+    ItemImg,
+    AsideTitle
   },
   data() {
     return {
@@ -51,6 +62,20 @@ export default {
         { title: '测试文章标题', img: 'banner01.jpg' },
         { title: '测试文章标题', img: 'banner02.jpg' },
         { title: '测试文章标题', img: 'banner03.jpg' }
+      ],
+      recommendList: [
+        {
+          title: '正则表达式的正确打开方式',
+          img: 'banner03.jpg'
+        },
+        {
+          title: '正则表达式的正确打开方式',
+          img: 'b04.jpg'
+        },
+        {
+          title: '正则表达式的正确打开方式',
+          img: 'b05.jpg'
+        }
       ],
       articleList: [
         {
@@ -169,10 +194,8 @@ export default {
     }
   }
   .right-side {
-    height: 1600px;
     width: 32%;
     float: right;
-    background-color: aqua;
   }
   .top-link {
     height: 400px;
@@ -202,6 +225,16 @@ export default {
       padding-left: 10px;
       border-radius: 5px;
       text-shadow: rgba(255, 255, 255, 0.3) 0px 1px 0px;
+    }
+  }
+  .recommend {
+    padding: 35px 30px;
+    margin-top: 20px;
+    background: #fff;
+    li {
+      margin: 0 auto;
+      margin-bottom: 20px;
+      width: 96%;
     }
   }
 }

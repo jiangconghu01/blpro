@@ -22,11 +22,12 @@
     "ie > 8"
   ],
   "dependencies": {
+    "@nuxtjs/axios": "^5.0.0",
     "cross-env": "^5.2.0",
-    "nuxt": "^2.0.0",
-    "koa": "^2.5.2",
     "element-ui": "^2.4.6",
-    "@nuxtjs/axios": "^5.0.0"
+    "koa": "^2.5.2",
+    "koa-static": "^5.0.0",
+    "nuxt": "^2.0.0"
   },
   "devDependencies": {
     "acorn": "^6.0.2",
