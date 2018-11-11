@@ -27,4 +27,9 @@ export default {
   text-align: center;
   width: 100%;
 }
+@media only screen and (max-width: 480px) {
+  .bg-top {
+    padding: 50px 0;
+  }
+}
 </style>

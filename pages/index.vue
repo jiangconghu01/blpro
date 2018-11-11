@@ -77,6 +77,9 @@
               <li>
                 <b>微信公众号和小程序：</b><a href="/">还在开发中</a>
               </li>
+              <li>
+                <b>个人微信：</b><img src="../assets/images/wechat.png" alt="">
+              </li>
             </ul>
           </section>
           <section class="aside-item link">
@@ -314,6 +317,9 @@ export default {
       }
       a {
         color: #096;
+      }
+      img {
+        width: 99%;
       }
       margin-bottom: 10px;
     }

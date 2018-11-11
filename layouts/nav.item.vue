@@ -1,8 +1,8 @@
 <template>
-  <div class="layout-article-detail">
+  <div class="layout-nav-item">
     <Header></Header>
     <Back-ground :imgurl="bgimg"></Back-ground>
-    <div class="article-detai-container clearfix">
+    <div class="nav-item-container clearfix">
       <section class="right-side"></section>
       <nuxt/>
     </div>
@@ -30,9 +30,9 @@ export default {
 </script>
 
 <style lang="scss">
-.layout-article-detail {
+.layout--nav-item {
   background-color: #f6f6f6;
-  .article-detai-container {
+  .nav-item-container {
     max-width: 1140px;
     margin: 20px auto 0;
   }
