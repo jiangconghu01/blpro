@@ -1,9 +1,12 @@
 <template>
-  <div class="com-container-itmimg">
+  <div :class="{'scale':type!=='1'}" class="com-container-itmimg" >
     <img :src="require(`@/assets/images/${img}`)" >
-    <p class="title">
-      帝国的cms方法实现
+    <p v-if="type==='1'" class="title">
+      {{ title }}
       <span><a href="/">阅读</a></span>
+    </p>
+    <p v-else class="title2">
+      <a href="/">{{ title }}</a>
     </p>
   </div>
 </template>
@@ -18,6 +21,11 @@ export default {
     title: {
       type: String,
       requred: false
+    },
+    type: {
+      type: String,
+      requred: false,
+      default: '1'
     }
   }
 }
@@ -26,11 +34,15 @@ export default {
 <style lang="scss">
 .com-container-itmimg {
   width: 100%;
+  max-height: 165px;
+  overflow: hidden;
   position: relative;
   background: #000;
-  //   &:hover {
-  //     background: #fff;
-  //   }
+  margin-bottom: 20px;
+  font-size: 0;
+  &.scale:hover img {
+    transform: scale(1.1);
+  }
   &:hover .title span {
     background: #fff;
     color: #333;
@@ -69,6 +81,15 @@ export default {
       color: #fff;
       display: block;
     }
+  }
+  .title2 {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    padding: 0 15px;
+    font-size: 1.6 * $fontbase;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
   }
 }
 </style>

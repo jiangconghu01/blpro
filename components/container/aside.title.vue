@@ -12,6 +12,7 @@
     margin-bottom: 20px;
     color: #282828;
     padding-bottom: 15px;
+    cursor: pointer;
     &:after {
       content: '';
       background-color: #282828;

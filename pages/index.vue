@@ -21,16 +21,70 @@
             <div class="head-photo">
               <a href="/"><img src="../assets/images/headphoto2.jpeg" alt=""></a>
             </div>
-            <p class="abstract">博主: 逸风</p>
+            <p class="abstract">站长: 逸风</p>
             <p class="abstract">职业: 长方形混凝土块转移工程师</p>
             <p class="abstract">邮箱: jiangconghu_y@126.com</p>
             <p class="abstract">随心听</p>
             <!-- <audio src="../assets/music/in-the-end.mp3"></audio> -->
           </section>
-          <section class="recommend">
+          <section class="aside-item recommend">
             <Aside-title>特别推荐</Aside-title>
             <ul>
-              <li v-for="item in recommendList" :key="item" class="item-img" ><Item-img :img="item.img" :title="item.title"></Item-img></li>
+              <li v-for="(item,index) in recommendList" :key="index+'img'" class="item-img" ><Item-img :img="item.img" :title="item.title"></Item-img></li>
+            </ul>
+          </section>
+          <section class="aside-item clicksort">
+            <Aside-title>点击排行</Aside-title>
+            <ul>
+              <li>
+                <Item-img :img="articleList[0].imgs[0]" :title="articleList[0].title" type="2"></Item-img>
+              </li>
+              <li v-for="(item,index) in articleList" :key="index+'small'">
+                <Article-small-item :img="item.imgs" :title="item.title" :date="item.date"></Article-small-item>
+              </li>
+            </ul>
+          </section>
+          <section class="aside-item latest">
+            <Aside-title>最新更新</Aside-title>
+            <ul>
+              <li>
+                <Item-img :img="articleList[0].imgs[0]" :title="articleList[0].title" type="2"></Item-img>
+              </li>
+              <li v-for="(item,index) in articleList" :key="index+'small'">
+                <Article-small-item :img="item.imgs" :title="item.title" :date="item.date"></Article-small-item>
+              </li>
+            </ul>            
+          </section>
+          <section class="aside-item tags">
+            <Aside-title>标签</Aside-title>
+            <Tags :tags="tags"></Tags>
+          </section>
+          <section class="aside-item infor">
+            <Aside-title>站点信息</Aside-title>
+            <ul>
+              <li>
+                <b>建站时间：</b>2018-09-09
+              </li>
+              <li>
+                <b>建站程序：</b>nuxt+koa2+mongodb+redis
+              </li>
+              <li>
+                <b>文章统计：</b>共25篇
+              </li>
+              <li>
+                <b>统计数据：</b><a href="/">百度统计</a>
+              </li>
+              <li>
+                <b>微信公众号和小程序：</b><a href="/">还在开发中</a>
+              </li>
+            </ul>
+          </section>
+          <section class="aside-item link">
+            <Aside-title>友情链接</Aside-title>
+            <ul>
+              <li>
+                <a href="/">逸风的博客</a>
+              </li>
             </ul>
           </section>
         </aside>
@@ -42,9 +96,11 @@
 <script>
 import Logo from '~/components/Logo.vue'
 import BackGround from '@/components/public/background.vue'
-import ArticleItem from '@/components/container/articleitem.vue'
-import ItemImg from '@/components/container/itemimg.vue'
-import AsideTitle from '@/components/container/asidetitle.vue'
+import ArticleItem from '@/components/container/article.item.vue'
+import ArticleSmallItem from '@/components/container/article.small.item.vue'
+import ItemImg from '@/components/container/item.img.vue'
+import Tags from '@/components/container/tags.vue'
+import AsideTitle from '@/components/container/aside.title.vue'
 import img from '@/assets/images/blank.jpg'
 
 export default {
@@ -52,12 +108,24 @@ export default {
     Logo,
     BackGround,
     ArticleItem,
+    ArticleSmallItem,
     ItemImg,
-    AsideTitle
+    AsideTitle,
+    Tags
   },
   data() {
     return {
       bgimg: img,
+      tags: [
+        { name: 'koa2', link: '/' },
+        { name: 'http', link: '/' },
+        { name: 'js基础', link: '/' },
+        { name: 'js基础', link: '/' },
+        { name: 'js基础', link: '/' },
+        { name: 'js基础', link: '/' },
+        { name: 'js基础', link: '/' },
+        { name: 'js基础', link: '/' }
+      ],
       banerlist: [
         { title: '测试文章标题', img: 'banner01.jpg' },
         { title: '测试文章标题', img: 'banner02.jpg' },
@@ -79,7 +147,7 @@ export default {
       ],
       articleList: [
         {
-          title: '正则表达式的正确打开方式',
+          title: '正则表达式的正确打开方sjfdsdfjsdfkjsdlfjsldfjlsdfjsdfskd式',
           abstrct:
             ' 如图，要实现上图效果，我采用如下方法：1、首先在数据库模型，增加字段，分别是图片2，图片3。2、增加标签模板，用if，else if 来判断，输出。思路已打开，样式调用就可以多样化啦！...',
           imgs: ['toppic01.jpg', 'toppic02.jpg'],
@@ -227,14 +295,38 @@ export default {
       text-shadow: rgba(255, 255, 255, 0.3) 0px 1px 0px;
     }
   }
-  .recommend {
+  .aside-item {
     padding: 35px 30px;
     margin-top: 20px;
+    margin-bottom: 20px;
     background: #fff;
-    li {
+    .item-img {
       margin: 0 auto;
-      margin-bottom: 20px;
+
       width: 96%;
+    }
+  }
+  .aside-item.infor {
+    color: #333;
+    li {
+      b {
+        font-size: 1.5 * $fontbase;
+      }
+      a {
+        color: #096;
+      }
+      margin-bottom: 10px;
+    }
+  }
+  .aside-item.link {
+    a {
+      color: #333;
+    }
+    li {
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      background-color: #f7f7f7;
     }
   }
 }
