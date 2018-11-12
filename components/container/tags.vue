@@ -3,7 +3,7 @@
     <ul>
       <a v-for="(ele,index) in tags" 
          :key="index" 
-         :style="{background:colors[index%10]}"
+         :style="{background:colors[index%10],lineHeight:small === undefined?'24px':'18px'}"
          :href="ele.link">{{ ele.name }}</a>
     </ul>
   </div>
@@ -15,18 +15,22 @@ export default {
     tags: {
       type: Array,
       requred: false
+    },
+    small: {
+      type: String,
+      requred: false
     }
   },
   data() {
     return {
       colors: [
         '#909399',
-        '#3FB8AF',
-        '#3299BB',
-        '#67C23A',
         '#E6A23C',
+        '#3FB8AF',
         '#F56C6C',
+        '#3299BB',
         '#EB6841',
+        '#67C23A',
         '#FE4365',
         '#FC9D9A',
         '#409EFF',

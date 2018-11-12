@@ -3,6 +3,9 @@
     <Header></Header>
     <Back-ground :imgurl="bgimg"></Back-ground>
     <div class="article-detai-container clearfix">
+      <section class="left-side">
+        <nuxt/>
+      </section>
       <section class="right-side">
         <section class="aside-item tags">
           <Aside-title type="center">标签</Aside-title>
@@ -37,7 +40,6 @@
           </li>
         </section>
       </section>
-      <nuxt/>
     </div>
     <Footer></Footer>
   </div>
@@ -149,6 +151,12 @@ export default {
     max-width: 1140px;
     margin: 20px auto 0;
   }
+  .left-side {
+    width: 66%;
+    float: left;
+    //background: aqua;
+    //height: 1600px;
+  }
   .right-side {
     width: 32%;
     float: right;
@@ -157,7 +165,6 @@ export default {
   }
   .aside-item {
     padding: 35px 30px;
-    margin-top: 20px;
     margin-bottom: 20px;
     background: #fff;
     .item-img {
