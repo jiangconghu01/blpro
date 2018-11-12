@@ -19,8 +19,23 @@
       <Test/>
       <div class="like-reward">
         <span class="item">很赞哦(112)</span>
-        <span class="item">打赏本帖</span>
+        <el-button class="item" type="text" @click="openReward()">打赏本帖</el-button>
+        
       </div>
+    </div>
+    <div class="share">
+
+    </div>
+    <div class="before-after">
+      <p class="before">
+        上一篇 : <a href="/">关于vue的文章</a>
+      </p>
+      <p class="next">
+        下一篇 : <a href="/">nuxt配置基本要求</a>
+      </p>
+    </div>
+    <div class="commont">
+
     </div>
 
   </div>
@@ -46,7 +61,13 @@ export default {
       ]
     }
   },
-  methods: {}
+  methods: {
+    openReward() {
+      this.$alert('<strong>暂时 <i>没有</i> 开发</strong>', '打赏', {
+        dangerouslyUseHTMLString: true
+      })
+    }
+  }
 }
 </script>
 
@@ -68,20 +89,50 @@ export default {
   }
   .like-reward {
     text-align: center;
-    margin-top: 20px;
-    span {
+    margin-top: 60px;
+    .item {
       display: inline-block;
       vertical-align: middle;
       margin: 0 20px;
       height: 30px;
       line-height: 30px;
-      background-color: #e2523a;
+      background-color: #ea6f5a;
       width: 120px;
       box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.2);
       border-radius: 3px;
       text-align: center;
       cursor: pointer;
       color: #fff;
+    }
+    .el-button {
+      white-space: normal;
+      font-size: inherit;
+      font-weight: normal;
+      padding: 0 0;
+      &:focus {
+        color: #fff;
+        border-color: #ea6f5a;
+        background-color: #ea6f5a;
+      }
+    }
+  }
+  .share,
+  .before-after,
+  .commont {
+    margin-top: 40px;
+  }
+  .before-after {
+    p {
+      height: 40px;
+      line-height: 40px;
+    }
+    a {
+      color: #333;
+      font-size: 1.6 * $fontbase;
+      font-weight: 500;
+      &:hover {
+        color: #175199;
+      }
     }
   }
 }
