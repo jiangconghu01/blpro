@@ -27,7 +27,7 @@ a:focus,a:hover{
 //media样式480、600、840、960、1280、1440和1600dp
 /* Extra small devices (phones, 480px and down) */
 @media only screen and (max-width: 480px) {
-    .layout-default{
+    .layout-common{
         header.component-header{
             .el-row{
                 display: none;
@@ -42,7 +42,7 @@ a:focus,a:hover{
     }
 }
 @media only screen and (min-width: 480px) and (max-width: 600px) {
-    .layout-default{
+    .layout-common{
         header.component-header{
             .el-row{
                 display: none;
@@ -59,7 +59,7 @@ a:focus,a:hover{
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) and (max-width: 840px){
-    .layout-default{
+    .layout-common{
         header.component-header{
             .el-row{
                 display: block;
@@ -85,7 +85,7 @@ a:focus,a:hover{
 
 /* Medium devices (landscape tablets, 800px and up) */
 @media only screen and (min-width: 840px) and (max-width: 960px){
-    .layout-default{
+    .layout-common{
         header.component-header{
             .el-row{
                 display: block;
@@ -107,7 +107,7 @@ a:focus,a:hover{
 
 /* Large devices (laptops/desktops, 960px and up) */
 @media only screen and (min-width: 960px) and (max-width: 1280px){
-    .layout-default{
+    .layout-common{
         header.component-header{
             .el-row{
                 display: block;
@@ -129,21 +129,21 @@ a:focus,a:hover{
 
 /* Extra large devices (large laptops and desktops, 1280px and up) */
 @media only screen and (min-width: 1280px) and (max-width: 1440px) {
-    .layout-default{
+    .layout-common{
         header.component-header{
             .el-row{
                 display: block;
                 width: 65%;
             }
         }
-    }
+   }
     .el-carousel__container{
         height: 400px;
     }
 }
 /* Extra large devices (large laptops and desktops, 1440px and up) */
 @media only screen  and (min-width: 1440px) {
-    .layout-default{
+    .layout-common{
         header.component-header{
             .el-row{
                 display: block;

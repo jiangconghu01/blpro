@@ -12,7 +12,7 @@
         <div class="select"><Hover-box></Hover-box></div>
       </el-col>
       <el-col :span="3"> <nuxt-link to="/"> 留言</nuxt-link></el-col>
-      <el-col :span="3"> <nuxt-link to="/"> 关于我</nuxt-link></el-col>
+      <el-col :span="3"> <nuxt-link to="/article.detail"> 关于我</nuxt-link></el-col>
       <el-col :span="5"> <Search-box></Search-box></el-col>
     </el-row>
   </header>

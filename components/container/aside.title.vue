@@ -1,8 +1,24 @@
 <template>
   <div class="com-container-sidetitle">
-    <h2><slot></slot></h2>
+    <h2 :class="[conclass]" ><slot></slot></h2>
   </div>
 </template>
+<script>
+export default {
+  props: {
+    type: {
+      type: String,
+      required: false
+    }
+  },
+  computed: {
+    conclass() {
+      return this.type === 'center' ? 'center' : 'normal'
+    }
+  }
+}
+</script>
+
 <style lang="scss">
 .com-container-sidetitle {
   h2 {
@@ -23,7 +39,10 @@
       position: absolute;
       transition: all 0.5s ease;
     }
-    &:hover:after {
+    &.center::after {
+      width: 100%;
+    }
+    &.normal:hover:after {
       width: 100%;
     }
   }

@@ -1,5 +1,5 @@
 <template>
-  <div class="layout-nav-item">
+  <div class="layout-nav-item layout-common">
     <Header></Header>
     <Back-ground :imgurl="bgimg"></Back-ground>
     <div class="nav-item-container clearfix">
