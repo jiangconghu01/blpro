@@ -16,7 +16,9 @@
       <Tags :tags="tags" small></Tags>
     </div>
     <div class="article-content">
+
       <Test/>
+
       <div class="like-reward">
         <span class="item">很赞哦(112)</span>
         <el-button class="item" type="text" @click="openReward()">打赏本帖</el-button>
@@ -35,7 +37,7 @@
       </p>
     </div>
     <div class="commont">
-
+      <Editor></Editor>
     </div>
 
   </div>
@@ -44,13 +46,15 @@
 <script>
 import Test from '~/components/article/test.vue'
 import Tags from '@/components/container/tags.vue'
+import Editor from '@/components/article/editor.vue'
 
 export default {
   layout: 'article.detail',
 
   components: {
     Test,
-    Tags
+    Tags,
+    Editor
   },
   data() {
     return {
