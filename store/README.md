@@ -8,3 +8,5 @@ Vuex Store option is implemented in the Nuxt.js framework.
 Creating a file in this directory activate the option in the framework automatically.
 
 More information about the usage of this directory in [the documentation](https://nuxtjs.org/guide/vuex-store).
+
+##this is a test
