@@ -38,6 +38,9 @@
     </div>
     <div class="commont">
       <Editor></Editor>
+      <div class="commont-list-box">
+        <Commont></Commont>
+      </div>
     </div>
 
   </div>
@@ -45,6 +48,7 @@
 
 <script>
 import Test from '~/components/article/test.vue'
+import Commont from '~/components/article/commont.vue'
 import Tags from '@/components/container/tags.vue'
 import Editor from '@/components/article/editor.vue'
 
@@ -54,7 +58,8 @@ export default {
   components: {
     Test,
     Tags,
-    Editor
+    Editor,
+    Commont
   },
   data() {
     return {
@@ -124,6 +129,9 @@ export default {
   .before-after,
   .commont {
     margin-top: 40px;
+    .commont-list-box {
+      margin-top: 20px;
+    }
   }
   .before-after {
     p {

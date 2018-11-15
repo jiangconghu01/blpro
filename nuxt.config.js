@@ -27,7 +27,8 @@ module.exports = {
   css: [
     'element-ui/lib/theme-chalk/reset.css',
     'element-ui/lib/theme-chalk/index.css',
-    './assets/resetui.scss'
+    './assets/resetui.scss',
+    './assets/icon/iconfont.css'
   ],
 
   /*
