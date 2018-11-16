@@ -33,7 +33,7 @@ export default {
 //@import '@/assets/global.scss';
 .component-header {
   position: fixed;
-  z-index: 999;
+  z-index: 10001;
   top: 0;
   width: 100%;
   height: 60px;

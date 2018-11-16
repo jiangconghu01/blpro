@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div ref="editor" style="text-align:left"></div>
+    <div ref="editor" style="text-align:left;"></div>
   </div>
 </template>
 
@@ -56,5 +56,5 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss">
 </style>

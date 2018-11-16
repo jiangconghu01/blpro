@@ -152,13 +152,13 @@ export default {
     margin: 20px auto 0;
   }
   .left-side {
-    width: 66%;
+    width: 68%;
     float: left;
     //background: aqua;
     //height: 1600px;
   }
   .right-side {
-    width: 32%;
+    width: 30%;
     float: right;
     // height: 1600px;
     // background: aqua;

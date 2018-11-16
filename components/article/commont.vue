@@ -17,7 +17,7 @@
     </div>
     <div class="reply">
       <div class="icon">
-        <span> <i class="iconfont el-icon-thrid-appreciate"></i>赞</span>
+        <span> <i class="iconfont el-icon-thrid-appreciate"></i>12人赞</span>
         <span>  <i class="iconfont el-icon-thrid-message"></i>回复</span>
         <span class="up-port">
           <i class="iconfont el-icon-thrid-activity"></i>举报
@@ -25,7 +25,7 @@
         
       </div>
       <div class="discuss">
-        <p class="text"><b>jsdfjsdf:</b>哈哈。谢谢.这种评价对我来说是最欣慰的。感谢你的认可。让我以后写起来更有动力了。</p>
+        <p class="text"><b>jsdfjsdf:@tst账号</b>哈哈。谢谢.这种评价对我来说是最欣慰的。感谢你的认可。让我以后写起来更有动力了。</p>
         <p class="opra">2018.10.27 21:05<i class="iconfont el-icon-thrid-message"></i>回复</p>
         <p class="add-new">
           <i class="iconfont el-icon-thrid-edit"></i>添加新评论
@@ -93,6 +93,7 @@ export default {
     .name {
       font-size: 1.5 * $fontbase;
       display: block;
+      color: #42c02e;
     }
     .date {
       display: block;
@@ -125,6 +126,26 @@ export default {
     margin-top: 20px;
     padding: 5px 0 5px 20px;
     border-left: 2px solid #d9d9d9;
+    .text {
+      b {
+        margin-right: 5px;
+        color: #3194d0;
+      }
+    }
+    .opra {
+      color: #969696;
+      cursor: pointer;
+      i {
+        margin-left: 5px;
+      }
+    }
+    .add-new {
+      color: #969696;
+      cursor: pointer;
+      i {
+        margin-right: 5px;
+      }
+    }
   }
 }
 </style>

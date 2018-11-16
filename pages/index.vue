@@ -225,7 +225,7 @@ export default {
   max-width: 1140px;
   margin: 20px auto 0;
   .left-side {
-    width: 66%;
+    width: 68%;
     float: left;
     background-color: aqua;
     .el-carousel {
@@ -265,7 +265,7 @@ export default {
     }
   }
   .right-side {
-    width: 32%;
+    width: 30%;
     float: right;
   }
   .top-link {
