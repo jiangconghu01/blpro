@@ -112,6 +112,9 @@ export default {
         cursor: pointer;
         margin: 0 5px 0 10px;
         color: #969696;
+        i {
+          margin-right: 5px;
+        }
       }
       .up-port {
         display: none;

@@ -34,7 +34,7 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: ['@/plugins/element-ui'],
+  plugins: ['@/plugins/element-ui', '~/plugins/demo.js'],
 
   /*
   ** Nuxt.js modules
@@ -42,6 +42,7 @@ module.exports = {
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios'
+    //'~/plugins/commont-emoji.js'
   ],
   /*
   ** Axios module configuration

@@ -37,7 +37,8 @@
       </p>
     </div>
     <div class="commont">
-      <Editor></Editor>
+      <Commont-input></Commont-input>
+      <!-- <Editor></Editor> -->
       <div class="commont-list-box">
         <Commont></Commont>
         <Commont></Commont>
@@ -54,6 +55,8 @@ import Test from '~/components/article/test.vue'
 import Commont from '~/components/article/commont.vue'
 import Tags from '@/components/container/tags.vue'
 import Editor from '@/components/article/editor.vue'
+import Emoji from '@/components/article/emoji.vue'
+import CommontInput from '@/components/article/commont.input.vue'
 
 export default {
   layout: 'article.detail',
@@ -62,7 +65,9 @@ export default {
     Test,
     Tags,
     Editor,
-    Commont
+    Commont,
+    CommontInput,
+    Emoji
   },
   data() {
     return {
@@ -73,11 +78,15 @@ export default {
       ]
     }
   },
+  mounted() {
+    this.$demoFun()
+  },
   methods: {
     openReward() {
       this.$alert('<strong>暂时 <i>没有</i> 开发</strong>', '打赏', {
         dangerouslyUseHTMLString: true
       })
+      console.log(...this.tags)
     }
   }
 }
