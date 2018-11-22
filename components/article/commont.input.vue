@@ -1,15 +1,17 @@
 <template>
   <div id="commont-input">
     <el-input
-      :autosize="{ minRows: 10, maxRows: 20}"
+      :autosize="{ minRows: 4, maxRows: 20}"
       v-model="value"
       type="textarea"
-      placeholder="请输入内容"
+      placeholder="写下你的评论..."
       resize="none">
     </el-input>
-    <div class="icon clearfix">
-      <i class="icon iconfont el-icon-thrid-smile" @click="showEmoji = !showEmoji"></i>
-      <el-button type="success" size="small" class="submit" @click="submit">提交</el-button>
+    <div class="icon box clearfix">
+      <span class="emoji-label">
+        <i class="icon iconfont el-icon-thrid-smile" @click="showEmoji = !showEmoji"></i><b>按Ctrl+Enter发送</b>
+      </span>
+      <el-button type="success" size="small" class="submit" @click="submit">发送</el-button>
       <transition name="fade" mode="">
         <div v-if="showEmoji" class="emoji-box" >
           <el-button 
@@ -74,14 +76,32 @@ ul {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-  margin: 60px auto;
-  width: 500px;
-  .icon {
-    position: relative;
+  margin: 40px auto;
+  width: 100%;
+  .el-textarea:focus {
+    border: 1px solid #dcdfe6;
+  }
+  .icon.box {
     margin-top: 20px;
+    position: relative;
+    .emoji-label {
+      display: inline-block;
+      vertical-align: top;
+      color: #969696;
+      b {
+        font-weight: normal;
+        line-height: 20px;
+        float: left;
+        margin-left: 10px;
+      }
+      i {
+        float: left;
+      }
+    }
     .iconfont {
       cursor: pointer;
-      color: #f7ba2a;
+
+      font-size: 20px;
     }
     .emoji-box {
       position: absolute;
@@ -104,6 +124,16 @@ ul {
     }
     .submit {
       float: right;
+      width: 78px;
+      padding: 9px 18px;
+      font-size: 16px;
+      border: none;
+      border-radius: 20px;
+      color: #fff !important;
+      background-color: #42c02e;
+      cursor: pointer;
+      outline: none;
+      display: block;
     }
   }
   .comment {

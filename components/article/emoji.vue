@@ -33,7 +33,7 @@ export default {
   data() {
     return {
       emojiData: data,
-      pannels: ['表情', '自然', '物品', '地点', '符号'],
+      pannels: ['emoji', 'nature', 'good', 'address', 'code'],
       activeIndex: 0
     }
   },
