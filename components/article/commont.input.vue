@@ -16,7 +16,7 @@
         <div v-if="showEmoji" class="emoji-box" >
           <el-button 
             :plain="true" 
-            class="pop-close" 
+            class="pop-close el-icon-close" 
             type="danger" 
             size="mini" 
             icon="close"
@@ -111,10 +111,15 @@ ul {
       box-shadow: 0 4px 20px 1px rgba(0, 0, 0, 0.2);
       background: white;
       .el-button {
+        &:hover {
+          background: #f6f6f6;
+        }
         position: absolute;
         border: none;
-        color: #ff4949;
-        right: 12px;
+        color: #969696;
+        background: #f6f6f6;
+        padding: 5px;
+        right: 17px;
         top: 12px;
         z-index: 10;
       }

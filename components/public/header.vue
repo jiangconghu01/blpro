@@ -4,15 +4,15 @@
       <el-col :span="4"> <nuxt-link to="/"> 逸风的博客</nuxt-link></el-col>
       <el-col :span="3"> <nuxt-link to="/"> 网站首页</nuxt-link></el-col>
       <el-col :span="3" class="nav"> 
-        <nuxt-link to="/" class="study"> 学无止境</nuxt-link>
+        <nuxt-link to="/nav/study" class="study"> 学无止境</nuxt-link>
         <div class="select"><Hover-box></Hover-box></div>
       </el-col>
       <el-col :span="3" class="nav">
-        <nuxt-link to="/" class="life"> 慢生活</nuxt-link>
+        <nuxt-link to="/nav/life" class="life"> 慢生活</nuxt-link>
         <div class="select"><Hover-box></Hover-box></div>
       </el-col>
-      <el-col :span="3"> <nuxt-link to="/"> 留言</nuxt-link></el-col>
-      <el-col :span="3"> <nuxt-link to="/article.detail"> 关于我</nuxt-link></el-col>
+      <el-col :span="3"> <nuxt-link to="/nav/message"> 留言</nuxt-link></el-col>
+      <el-col :span="3"> <nuxt-link to="/article/1.detail"> 关于我</nuxt-link></el-col>
       <el-col :span="5"> <Search-box></Search-box></el-col>
     </el-row>
   </header>
