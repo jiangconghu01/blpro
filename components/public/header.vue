@@ -38,7 +38,18 @@ export default {
   width: 100%;
   height: 60px;
   line-height: 60px;
-  background-color: $bgcolor;
+  opacity: 0.9;
+  //background-color: $bgcolor;
+  background: #000
+    linear-gradient(
+      to left,
+      #4cd964,
+      #5ac8fa,
+      #007aff,
+      #34aadc,
+      #5856d6,
+      #ff2d55
+    );
   .el-row {
     margin: 0 auto;
     width: 55%;

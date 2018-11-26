@@ -227,7 +227,7 @@ export default {
   margin: 0 auto;
 }
 .index-containner {
-  max-width: 1140px;
+  max-width: $layout_width;
   margin: 20px auto 0;
   .left-side {
     width: 68%;

@@ -160,7 +160,7 @@ export default {
 .layout-nav-item {
   background-color: #f6f6f6;
   .nav-item-container {
-    max-width: 1140px;
+    max-width: $layout_width;
     margin: 20px auto 0;
   }
   .left-side {

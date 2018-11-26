@@ -148,7 +148,7 @@ export default {
 .layout-article-detail {
   background-color: #f6f6f6;
   .article-detai-container {
-    max-width: 1140px;
+    max-width: $layout_width;
     margin: 20px auto 0;
   }
   .left-side {
