@@ -2,7 +2,7 @@
   <div class="layout-nav-item layout-common">
     <Header></Header>
     <Back-ground :imgurl="bgimg"></Back-ground>
-    <div class="nav-item-container clearfix">
+    <div class="nav-item-container layout-container clearfix">
       <section class="left-side">
         <nuxt/>
       </section>

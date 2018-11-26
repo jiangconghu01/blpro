@@ -160,4 +160,11 @@ a:focus,a:hover{
 
 // }
 
-
+@media only screen and (max-width: 840px) {
+    .right-side {
+      display: none;
+    }
+    .layout-container .left-side {
+      width: 100% !important;
+    }
+  }

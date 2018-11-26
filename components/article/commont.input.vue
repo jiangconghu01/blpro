@@ -4,14 +4,14 @@
       :autosize="{ minRows: 4, maxRows: 20}"
       v-model="value"
       type="textarea"
-      placeholder="写下你的评论..."
+      placeholder="留下你的足记..."
       resize="none">
     </el-input>
     <div class="icon box clearfix">
       <span class="emoji-label">
         <i class="icon iconfont el-icon-thrid-smile" @click="showEmoji = !showEmoji"></i><b>按Ctrl+Enter发送</b>
       </span>
-      <el-button type="success" size="small" class="submit" @click="submit">发送</el-button>
+      <el-button type="success" size="small" class="submit" @click="submit"><slot name="button"></slot></el-button>
       <transition name="fade" mode="">
         <div v-if="showEmoji" class="emoji-box" >
           <el-button 

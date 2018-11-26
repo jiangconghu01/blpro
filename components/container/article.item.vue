@@ -1,6 +1,6 @@
 <template>
   <div class="com-container-article clearfix">
-    <h3 class="title" title="帝国cms 首页或者列表页 实现图文不同样式调用方法"><a href="/" target="_blank">testpage</a>{{ itemInfor.title }}</h3>
+    <h3 class="title" title="帝国cms 首页或者列表页 实现图文不同样式调用方法"><a :href="itemInfor.link" target="_blank">{{ itemInfor.title }}</a></h3>
     <div class="abstrct">
       <div v-if="itemInfor.layout === 0" :style="{float:itemInfor.imgsize ==='sm'?'left':'none',width:itemInfor.imgsize ==='sm'? '28%':'100%'}" class="img">
         <img :src="require(`@/assets/images/${itemInfor.imgs[0]}`)" alt="">
@@ -16,11 +16,11 @@
     </div>
     <div class="blog-infor">
       <el-row :gutter="8">
-        <el-col :span="6"><div :title="itemInfor.author" class="grid-content author">{{ itemInfor.author }}</div></el-col>
-        <el-col :span="4"><div class="grid-content muname">{{ itemInfor.muname }}</div></el-col>
-        <el-col :span="6"><div class="grid-content date">{{ itemInfor.date }}</div></el-col>
-        <el-col :span="5"><div class="grid-content view">{{ itemInfor.view }}已阅读</div></el-col>
-        <el-col :span="3"><div class="grid-content like">{{ itemInfor.like }}</div></el-col>
+        <el-col :xs="9" :span="6"><div :title="itemInfor.author" class="grid-content author">{{ itemInfor.author }}</div></el-col>
+        <el-col :span="4" class="small-none"><div class="grid-content muname">{{ itemInfor.muname }}</div></el-col>
+        <el-col :span="6" class="small-none"><div class="grid-content date">{{ itemInfor.date }}</div></el-col>
+        <el-col :span="5" class="small-none"><div class="grid-content view">{{ itemInfor.view }}已阅读</div></el-col>
+        <el-col :xs="6" :span="3"><div class="grid-content like">{{ itemInfor.like }}</div></el-col>
       </el-row>
     </div>
   </div>
@@ -74,6 +74,14 @@ export default {
     //text-overflow: ellipsis;
     // white-space: nowrap;
     //overflow: hidden;
+  }
+  .title {
+    a {
+      color: #555;
+      &:hover {
+        color: #6bc30d;
+      }
+    }
   }
   .abstrct {
     .img {
@@ -155,6 +163,15 @@ export default {
         li {
           height: 90px;
         }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .com-container-article {
+    .blog-infor {
+      .small-none {
+        display: none;
       }
     }
   }

@@ -34,7 +34,11 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: ['@/plugins/element-ui', '~/plugins/demo.js'],
+  plugins: [
+    '@/plugins/element-ui',
+    '~/plugins/demo.js',
+    '~/plugins/commont-emoji.js'
+  ],
 
   /*
   ** Nuxt.js modules

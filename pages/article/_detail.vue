@@ -4,7 +4,7 @@
     <div class="bread-crumb">
       <el-breadcrumb separator-class="el-icon-arrow-right">
         <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-        <el-breadcrumb-item>活动管理</el-breadcrumb-item>
+        <el-breadcrumb-item>文章详情</el-breadcrumb-item>
       </el-breadcrumb>
     </div>
     <h3 class="title">关于git工具的使用</h3>
@@ -37,7 +37,12 @@
       </p>
     </div>
     <div class="commont">
-      <Commont-input></Commont-input>
+      <Commont-input>
+        <template slot="button">
+          发送
+        </template>
+        
+      </Commont-input>
       <!-- <Editor></Editor> -->
       <div class="commont-list-box">
         <Commont></Commont>

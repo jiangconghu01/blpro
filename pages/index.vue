@@ -2,7 +2,7 @@
   <div class="index-box">
     <Back-ground :imgurl="bgimg"></Back-ground>
     <div class="index-layout">
-      <div class="index-containner clearfix">
+      <div class="index-containner layout-container clearfix">
         <article class="left-side">
           <!-- <el-carousel trigger="click" height="350px"> -->
           <el-carousel arrow="always">
@@ -154,6 +154,7 @@ export default {
           abstrct:
             ' 如图，要实现上图效果，我采用如下方法：1、首先在数据库模型，增加字段，分别是图片2，图片3。2、增加标签模板，用if，else if 来判断，输出。思路已打开，样式调用就可以多样化啦！...',
           imgs: ['toppic01.jpg', 'toppic02.jpg'],
+          link: '/article/1001',
           imgsize: 'sm',
           author: 'jiangconghu',
           muname: '慢生活',
@@ -166,6 +167,7 @@ export default {
           abstrct:
             ' 如图，要实现上图效果，我采用如下方法：1、首先在数据库模型，增加字段，分别是图片2，图片3。2、增加标签模板，用if，else if 来判断，输出。思路已打开，样式调用就可以多样化啦！...',
           imgs: ['avatar.jpg'],
+          link: '/article/1001',
           imgsize: 'sm',
           author: 'jiangconghu',
           muname: '慢生活',
@@ -178,6 +180,7 @@ export default {
           abstrct:
             ' 如图，要实现上图效果，我采用如下方法：1、首先在数据库模型，增加字段，分别是图片2，图片3。2、增加标签模板，用if，else if 来判断，输出。思路已打开，样式调用就可以多样化啦！...',
           imgs: ['toppic01.jpg', 'toppic02.jpg', 'avatar.jpg'],
+          link: '/article/1001',
           imgsize: 'sm',
           author: 'jiangconghu',
           muname: '慢生活',
@@ -190,6 +193,7 @@ export default {
           abstrct:
             ' 如图，要实现上图效果，我采用如下方法：1、首先在数据库模型，增加字段，分别是图片2，图片3。2、增加标签模板，用if，else if 来判断，输出。思路已打开，样式调用就可以多样化啦！...',
           imgs: [],
+          link: '/article/1001',
           imgsize: 'sm',
           author: 'jiangconghu',
           muname: '慢生活',
@@ -202,6 +206,7 @@ export default {
           abstrct:
             ' 如图，要实现上图效果，我采用如下方法：1、首先在数据库模型，增加字段，分别是图片2，图片3。2、增加标签模板，用if，else if 来判断，输出。思路已打开，样式调用就可以多样化啦！...',
           imgs: ['toppic01.jpg'],
+          link: '/article/1001',
           imgsize: 'lg',
           author: 'jiangconghu',
           muname: '慢生活',
@@ -227,7 +232,6 @@ export default {
   .left-side {
     width: 68%;
     float: left;
-    background-color: aqua;
     .el-carousel {
       margin-bottom: 20px;
     }
@@ -334,14 +338,6 @@ export default {
       text-align: center;
       background-color: #f7f7f7;
     }
-  }
-}
-@media only screen and (max-width: 840px) {
-  .right-side {
-    display: none;
-  }
-  .index-containner .left-side {
-    width: 100%;
   }
 }
 </style>

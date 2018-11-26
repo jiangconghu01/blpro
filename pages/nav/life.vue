@@ -1,7 +1,15 @@
 <template>
 
   <div class="life-container-box">
-    life的文章列表
+    <div class="bread-crumb">
+      <el-breadcrumb separator-class="el-icon-arrow-right">
+        <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+        <el-breadcrumb-item>慢生活</el-breadcrumb-item>
+      </el-breadcrumb>
+    </div>
+    <div class="left-content-box">
+      生活文章列表
+    </div>
 
   </div>
 </template>
