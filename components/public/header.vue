@@ -73,27 +73,5 @@ export default {
       display: block;
     }
   }
-  //   .select {
-  //     ul {
-  //       //   transform: scaleY(0);
-  //       //   transform-origin: 0 0;
-  //       display: none;
-  //       //   height: 0;
-  //       //   width: 0;
-  //       //   overflow: hidden;
-  //       //   transition: height 0.2s linear 0.1s;
-  //     }
-  //   }
-  //   .study {
-  //     &:hover + .select ul {
-  //       display: block;
-  //       //   height: 200px;
-  //       //   width: 100%;
-  //       //transform: scaleY(1);
-  //     }
-  //   }
-  //   .life {
-  //     @extend .study;
-  //   }
 }
 </style>

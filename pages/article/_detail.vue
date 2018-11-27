@@ -41,7 +41,6 @@
         <template slot="button">
           发送
         </template>
-        
       </Commont-input>
       <!-- <Editor></Editor> -->
       <div class="commont-list-box">
