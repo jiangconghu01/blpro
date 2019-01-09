@@ -24,6 +24,6 @@ module.exports = {
     "vue/html-self-closing": "off",
     "vue/require-default-prop":"off",
     "vue/name-property-casing":"off",
-    "eol-last":'error'
+    "eol-last":'off'
   }
 }

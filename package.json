@@ -28,6 +28,7 @@
     "koa": "^2.5.2",
     "koa-static": "^5.0.0",
     "nuxt": "^2.0.0",
+    "vue-meditor": "^0.9.3",
     "wangeditor": "^3.1.1"
   },
   "devDependencies": {

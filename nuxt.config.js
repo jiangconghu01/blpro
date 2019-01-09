@@ -37,7 +37,8 @@ module.exports = {
   plugins: [
     '@/plugins/element-ui',
     '~/plugins/demo.js',
-    '~/plugins/commont-emoji.js'
+    '~/plugins/commont-emoji.js',
+    { src: '~/plugins/markdown.js', ssr: false }
   ],
 
   /*
