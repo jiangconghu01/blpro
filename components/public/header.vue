@@ -39,17 +39,17 @@ export default {
   height: 60px;
   line-height: 60px;
   opacity: 0.9;
-  //background-color: $bgcolor;
-  background: #000
-    linear-gradient(
-      to left,
-      #4cd964,
-      #5ac8fa,
-      #007aff,
-      #34aadc,
-      #5856d6,
-      #ff2d55
-    );
+  background-color: $bgcolor;
+  // background: #000
+  //   linear-gradient(
+  //     to left,
+  //     #4cd964,
+  //     #5ac8fa,
+  //     #007aff,
+  //     #34aadc,
+  //     #5856d6,
+  //     #ff2d55
+  //   );
   .el-row {
     margin: 0 auto;
     width: 55%;
