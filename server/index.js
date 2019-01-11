@@ -4,9 +4,24 @@ const consola = require('consola')
 const { Nuxt, Builder } = require('nuxt')
 const staticzSource = require('koa-static')
 
+import mongoose from 'mongoose'
+import bodyParser from 'koa-bodyparser'
+import json from 'koa-json'
+import dbConfig from './dao/config'
+import article from './interface/article'
+
 const app = new Koa()
 const host = process.env.HOST || '127.0.0.1'
 const port = process.env.PORT || 3000
+
+app.use(json())
+
+mongoose.connect(
+  dbConfig.dbs,
+  {
+    useNewUrlParser: true
+  }
+)
 
 console.log(process.env.HOST, process.env.PORT)
 // Import and Set Nuxt.js options
@@ -22,7 +37,7 @@ async function start() {
     const builder = new Builder(nuxt)
     await builder.build()
   }
-
+  app.use(article.routes()).use(article.allowedMethods())
   app.use(ctx => {
     ctx.status = 200 // koa defaults to 404 when it sees that status is unset
 

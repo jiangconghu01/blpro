@@ -50,7 +50,6 @@ export default {
       }
     },
     saveArticle() {
-      console.log(this.$refs.markdown)
       this.$refs.markdown.handleSave()
       //this.getContent()
     }
