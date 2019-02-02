@@ -26,8 +26,13 @@
     "cross-env": "^5.2.0",
     "element-ui": "^2.4.6",
     "koa": "^2.5.2",
+    "koa-bodyparser": "^4.2.1",
+    "koa-json": "^2.0.2",
+    "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
+    "mongoose": "^5.4.3",
     "nuxt": "^2.0.0",
+    "vue-meditor": "^0.9.3",
     "wangeditor": "^3.1.1"
   },
   "devDependencies": {
