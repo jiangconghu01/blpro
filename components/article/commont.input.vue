@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 <template>
   <div id="commont-input">
     <el-input
