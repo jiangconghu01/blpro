@@ -3,11 +3,9 @@ import Koa from 'koa'
 const consola = require('consola')
 const { Nuxt, Builder } = require('nuxt')
 const staticzSource = require('koa-static')
-
-import mongoose from 'mongoose'
+const db = require('./dao/db.js')
 import bodyParser from 'koa-bodyparser'
 import json from 'koa-json'
-import dbConfig from './dao/config'
 import article from './interface/article'
 
 const app = new Koa()
@@ -15,13 +13,7 @@ const host = process.env.HOST || '127.0.0.1'
 const port = process.env.PORT || 3000
 
 app.use(json())
-
-mongoose.connect(
-  dbConfig.dbs,
-  {
-    useNewUrlParser: true
-  }
-)
+app.use(bodyParser())
 
 console.log(process.env.HOST, process.env.PORT)
 // Import and Set Nuxt.js options
@@ -57,5 +49,5 @@ async function start() {
     badge: true
   })
 }
-
+db()
 start()
