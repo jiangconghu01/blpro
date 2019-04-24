@@ -1,17 +1,26 @@
 import Router from 'koa-router'
-import Article from '../dao/models/article.mo.js'
+import Article from '../dao/artmodels/article.mo.js'
 
 let router = new Router({ prefix: '/article' })
-router.get('/savearticle', async ctx => {
-  const m = ctx.request.body
-  console.log(ctx.request)
-  //const { title, tag, markdownValue, htmlValue } = ctx.request.body
-
-  //let art = await Article.create({ title, tag, markdownValue, htmlValue })
+router.post('/savearticle', async ctx => {
+  const { title, tag, markdownValue, htmlValue } = ctx.request.body
+  const res = await insert({ title, tag, markdownValue, htmlValue })
+  console.log(res)
   ctx.body = {
-    a: 99,
-    b: 55
+    code: res
   }
 })
-
+const insert = obj => {
+  return new Promise((resolve, reject) => {
+    Article.create([obj], function(err, doc) {
+      if (err) {
+        console.error(err)
+        reject(err)
+      } else {
+        console.log(['SUCCESS'])
+        resolve(doc)
+      }
+    })
+  })
+}
 export default router

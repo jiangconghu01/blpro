@@ -57,5 +57,5 @@ async function start() {
     badge: true
   })
 }
-
+db()
 start()
