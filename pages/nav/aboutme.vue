@@ -7,8 +7,8 @@
         <el-breadcrumb-item>关于</el-breadcrumb-item>
       </el-breadcrumb>
     </div>
-    <div class="left-content-box">
-      <h3 class="title">转行码农</h3>
+    <div class="left-content-box"> 
+      <h3 class="title">转行码农</h3> 
       <p>
         14年毕业后在入职某国企施工单位，在重庆工地搬砖两年，很迷茫。16年底离开重庆到杭州转行做java开发，17年中旬至今从事web前端开发。
       </p>

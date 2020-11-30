@@ -12,7 +12,7 @@
             <img src="../assets/images/headphoto2.jpeg" alt="">
           </p>
           <p class="name">jiangconghu | 逸风</p>
-          <p class="job">Web全栈工程师</p>
+          <p class="job">Web搬砖工程师</p>
           <p class="abstract">
             一个90后草根站长！17年入行。一直潜心研究web前端和后端技术，一边工作一边积累经验，分享一些个人学习记录和学习资料。
           </p>
@@ -141,5 +141,3 @@ html {
   margin: 0;
 }
 </style>
-<script>
-

@@ -217,6 +217,10 @@ export default {
       ]
     }
   },
+  mounted() {
+    this.$demoFun()
+    this.$aniscoll()
+  },
   methods: {}
 }
 </script>

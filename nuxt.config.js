@@ -27,6 +27,7 @@ module.exports = {
   css: [
     'element-ui/lib/theme-chalk/reset.css',
     'element-ui/lib/theme-chalk/index.css',
+    'animate.css',
     './assets/resetui.scss',
     './assets/icon/iconfont.css'
   ],
@@ -38,7 +39,8 @@ module.exports = {
     '@/plugins/element-ui',
     '~/plugins/demo.js',
     '~/plugins/commont-emoji.js',
-    { src: '~/plugins/markdown.js', ssr: false }
+    { src: '~/plugins/markdown.js', ssr: false },
+    { src: '~/plugins/animate-scroll.js', ssr: false }
   ],
 
   /*

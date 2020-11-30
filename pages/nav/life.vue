@@ -7,7 +7,7 @@
         <el-breadcrumb-item>慢生活</el-breadcrumb-item>
       </el-breadcrumb>
     </div>
-    <div class="left-content-box">
+    <div class="left-content-box">  
       生活文章列表
     </div>
 

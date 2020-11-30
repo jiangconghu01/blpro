@@ -1,5 +1,5 @@
 <template>
-  <div class="com-container-article clearfix">
+  <div class="com-container-article clearfix animated" myAnim="zoomIn">
     <h3 class="title" title="帝国cms 首页或者列表页 实现图文不同样式调用方法"><a :href="itemInfor.link" target="_blank">{{ itemInfor.title }}</a></h3>
     <div class="abstrct">
       <div v-if="itemInfor.layout === 0" :style="{float:itemInfor.imgsize ==='sm'?'left':'none',width:itemInfor.imgsize ==='sm'? '28%':'100%'}" class="img">

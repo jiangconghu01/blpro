@@ -16,12 +16,12 @@ const port = process.env.PORT || 3000
 
 app.use(json())
 
-mongoose.connect(
-  dbConfig.dbs,
-  {
-    useNewUrlParser: true
-  }
-)
+// mongoose.connect(
+//   dbConfig.dbs,
+//   {
+//     useNewUrlParser: true
+//   }
+// )
 
 console.log(process.env.HOST, process.env.PORT)
 // Import and Set Nuxt.js options

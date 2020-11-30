@@ -8,7 +8,13 @@
       </el-form>
     </div>
     <div>
-      <mark-down ref="markdown" :height="520" :auto-save="false" theme="OneDark" @on-save="getContent"></mark-down>
+      <mark-down 
+        ref="markdown" 
+        :height="520" 
+        :auto-save="false" 
+        theme="OneDark" 
+        @on-save="getContent">
+      </mark-down>
     </div>
     <div class="editor-button">
       <el-row>
